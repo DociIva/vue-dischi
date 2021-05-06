@@ -1,0 +1,15 @@
+// cosi hai accesso al file di vars
+@import './vars.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vh;
+    height: 100vh;
+    background: $bg-color;
+    color: $text-color;
+}
