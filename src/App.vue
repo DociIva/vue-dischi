@@ -30,4 +30,5 @@ export default {
 @import '@/styles/general';
 
 
+
 </style>

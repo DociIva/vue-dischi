@@ -1,5 +1,10 @@
 <template>
    <section class="music-card">
+       <div v-for="(song, index) in musicCard" :key="index" 
+            class="content-music">
+            <Music :info="song" />
+            
+       </div>
 
    </section>
 </template>
@@ -7,14 +12,18 @@
 <script>
 // axios chiamate 
 import axios from 'axios';
+import Music from '@/components/Music.vue';
 export default {
     name:'Products',
+    components: {
+        Music,
+    },
     // collezione dei dati 
     data() {
         return {
             apiURL: 'https://flynn.boolean.careers/exercises/api/array/music',
             musicCard: [],
-            loading: true,
+            seccess: false,
         }
     },
     created() {
@@ -25,8 +34,8 @@ export default {
             // chiamata API accediamo alla proprietà
             axios.get(this.apiURL)
             .then(res => {
-                //console.log( res.data);
-                this.musicCard = res.data;
+               // console.log( res.data.response);
+               this.musicCard = res.data.response;
             })
             .catch(err => {
                 console.log('ERRORE', err);
@@ -37,13 +46,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.card {
-    width: 950px;
-    margin: 0 auto;
-    background: lightsalmon;
-    height: 200px;
-    width: 800px ;
+.music-card {
+    width: 100%;
+    height: 500px;
+}
+.content-music {
+    width: 150px;
+    height: 150px;
+    background: red;
 }
 
 </style>
