@@ -1,6 +1,6 @@
 <template>
-   <header class="containe"> 
-      
+   <header> 
+      <img src="@/assets/logo.png" alt="">
    </header>
 </template>
 
@@ -13,9 +13,13 @@ export default {
 <style scoped lang="scss">
 // header
 header {
-    width: 100%;
-    height: 100%;
+    width: 1200vh;
     background: #2e3a46;
+}
+img {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
 }
 
 </style>
