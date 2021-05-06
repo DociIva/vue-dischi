@@ -26,6 +26,9 @@ export default {
     color:#6e7071;
     margin: 5px;
 }
+.genere {
+    margin: 5px;
+}
 img {
     width: 80%;
 }
