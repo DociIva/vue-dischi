@@ -47,13 +47,19 @@ export default {
 
 <style scoped lang="scss">
 .music-card {
-    width: 100%;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 80px;
 }
 .content-music {
-    width: 150px;
-    height: 150px;
-    background: red;
+    max-width: 200px;
+    text-align: center;
+    color: #fff;
+    margin: 14px;
+    background-color: #2e3a46;
+    padding: 40px;
+    cursor: pointer;
 }
 
 </style>
