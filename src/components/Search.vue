@@ -1,7 +1,12 @@
 <template>
    <form  class="form">
      <div class="content-search">
-         <select name="all" id="all"></select>
+         <!--cosi ma con i dati dinamici passando dal filgio al papa-->
+         <select name="all" id="all" v-model="selected">
+            <option value=""> Please select</option>
+             <option value="">A</option>
+
+         </select>
      </div>
 
    </form>
