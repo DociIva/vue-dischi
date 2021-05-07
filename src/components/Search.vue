@@ -1,10 +1,7 @@
 <template>
    <form  class="form">
      <div class="content-search">
-         <input type="text" 
-         
-         
-         />
+         <select name="all" id="all"></select>
      </div>
 
    </form>
@@ -23,7 +20,9 @@ export default {
     align-items: center;
     margin: 30px;
 }
-input {
+select {
+    width: 100px;
+    height: 50px;
    padding: 10px;
 }
 .content-search {
