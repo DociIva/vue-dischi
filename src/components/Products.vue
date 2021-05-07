@@ -1,22 +1,27 @@
 <template>
-   <section class="music-card">
-       <div v-for="(song, index) in musicCard" :key="index" 
+   <section>
+       <div>
+           <Search />
+       </div>
+       <div class="music-card">
+           <div v-for="(song, index) in musicCard" :key="index" 
             class="content-music">
             <Music :info="song" />
-            
        </div>
-
+       </div>
    </section>
 </template>
 
 <script>
 // axios chiamate 
 import axios from 'axios';
+import Search from '@/components/Search.vue';
 import Music from '@/components/Music.vue';
 export default {
     name:'Products',
     components: {
         Music,
+        Search,
     },
     // collezione dei dati 
     data() {
@@ -50,7 +55,7 @@ export default {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 .content-music {
     max-width: 200px;

@@ -4,8 +4,7 @@
             <h4>{{info.title}}</h4>
             <div class="autore">{{info.author}}</div>
             <div class="anno">{{info.year}} </div>
-            <div class="genere">{{info.genre}}</div>
-          
+            <div class="genere">{{info.genre}}</div>   
    </section>
 
 </template>
