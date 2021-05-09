@@ -1,13 +1,13 @@
 <template>
    <form  class="form">
-     <div class="content-search">
+     <label for="select"> Filter By Gender</label>
          <!--cosi ma con i dati dinamici passando dal filgio al papa-->
-         <select name="all" id="all" v-model="selected">
-            <option value=""> Please select</option>
-             <option value="">A</option>
+         <select @change="$emit('selectGener', select)" v-model="select">
+            <option value="">All</option>
+            <option v-for="(genere, index) in genereLista" :key="genere + index" > {{genere}}</option>
 
          </select>
-     </div>
+     
 
    </form>
 </template>
@@ -15,6 +15,13 @@
 <script>
 export default {
     name:'Search',
+
+    data() {
+        return {
+            genereLista : ['Rock', 'Pop', 'Jazz', 'Metal',],
+            select: 'All',
+        }
+    },
 }
 </script>
 
@@ -30,7 +37,5 @@ select {
     height: 50px;
    padding: 10px;
 }
-.content-search {
-
-}
+//.content-search {}
 </style>

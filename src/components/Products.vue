@@ -1,5 +1,5 @@
 <template>
-   <section>
+   <section class="container">
        <div>
            <Search />
        </div>
@@ -45,7 +45,7 @@ export default {
             .catch(err => {
                 console.log('ERRORE', err);
             });
-        }
+        },
     }
 }
 </script>
@@ -55,7 +55,6 @@ export default {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 40px;
 }
 .content-music {
     max-width: 200px;
